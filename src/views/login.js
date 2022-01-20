@@ -17,7 +17,7 @@ class Login extends React.Component{
 
     render(){
         return(
-            <div className="container">
+            <div>
                 <div className="row">
                     {/* O style a baixo fica igual esse mas de forma diferente: style=" position: relative;left: 300px;" */}
                     <div className="col-md-6" style={{position: 'relative', left: '300px'}}>

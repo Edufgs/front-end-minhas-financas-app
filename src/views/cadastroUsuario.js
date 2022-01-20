@@ -17,7 +17,7 @@ class CadastroUsuario extends React.Component{
 
     render(){
         return(
-            <div className="container">
+            <div>
                 <Card title="Cadastro de Usúario">
                     <div className="row">
                         <div className="col-lg-12">
