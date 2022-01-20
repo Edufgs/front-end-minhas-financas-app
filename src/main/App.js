@@ -1,7 +1,7 @@
 import React from 'react'
-import Login from './views/login' //importa o login, não precisa colocar com .js
 import 'bootswatch/dist/flatly/bootstrap.css' //Tem que colocar .css
-import './custom.css' // ./ é para mostrar a onde eu estou, em cima não precisa pq está na pasta node_modules
+import '../custom.css' // ./ é para mostrar a onde eu estou, em cima não precisa pq está na pasta node_modules
+import Rotas from './rotas'
 
 class App extends React.Component {
 
@@ -10,7 +10,7 @@ class App extends React.Component {
     return(
       <div>
         {/* Assim para mostrar é só colocar em forma de tag */}
-        <Login/>
+        <Rotas/>
       </div>
     )
   }

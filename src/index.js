@@ -5,7 +5,7 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom' //Iniciar a aplicação web
-import App from './App' //Importação do app, primeiro componente
+import App from './main/App' //Importação do app, primeiro componente
 
 //Codigo que inicia a aplicação, onde ele recebe dois parametros
 //App é a aplicação
