@@ -1,6 +1,10 @@
 import React from "react"
 import Card from "../components/card"
 import FormGruop from "../components/form-gruop"
+//importando withRouter que vai retornar o componente decorado
+//Esse withRouter ele pega um componete e retorna com mais funcionalidades
+//Uma funcionalidade improtante é navegar para outros componentes
+import {withRouter} from 'react-router-dom'
 
 class Login extends React.Component{
 
@@ -13,6 +17,12 @@ class Login extends React.Component{
     entrar = () => {
         console.log('Email: ', this.state.email)
         console.log('Senha:', this.state.senha)
+    }
+
+    prepareCadastrar = () => {
+        //history.push('/cadastro-usuarios') = ele recebe como parametro a rota que desejo navegar
+        //Não precisa colocar #/ pois ele ja estra dentro de HashRouter lá em Rotas.js
+        this.props.history.push('/cadastro-usuarios')
     }
 
     render(){
@@ -51,7 +61,7 @@ class Login extends React.Component{
                                                 </FormGruop>
 
                                                 <button onClick={this.entrar} className="btn btn-success">Entrar</button>
-                                                <button type="button" className="btn btn-danger">Cadastrar</button>
+                                                <button onClick={this.prepareCadastrar} type="button" className="btn btn-danger">Cadastrar</button>
                                             </fieldset>
                                         </div>
                                     </div>
@@ -66,4 +76,6 @@ class Login extends React.Component{
     }
 }
 
-export default Login
+//Esse withRouter ele pega um componete e retorna com mais funcionalidades
+//Uma funcionalidade improtante é navegar para outros componentes
+export default withRouter(Login)
