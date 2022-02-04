@@ -5,6 +5,8 @@ import FormGruop from "../components/form-gruop"
 //Esse withRouter ele pega um componete e retorna com mais funcionalidades
 //Uma funcionalidade improtante é navegar para outros componentes
 import {withRouter} from 'react-router-dom'
+//Faz as requisições
+import axios from "axios"
 
 class Login extends React.Component{
 
@@ -15,8 +17,17 @@ class Login extends React.Component{
     }
 
     entrar = () => {
-        console.log('Email: ', this.state.email)
-        console.log('Senha:', this.state.senha)
+        //Faz uma requisição do tipo post com o endereço e os dados
+        axios
+        .post('http://localhost:8080/api/usuarios/autenticar', {
+            //Dados da requisição
+            email:this.state.email,
+            senha: this.state.senha
+        }).then( response => { //Recebe a resposta do servidor (exemplo: ok, BadRequest, Created,... e dados)
+            console.log(response)
+        } ).catch(erro => { //Se der erro
+            console.log(erro.response)
+        })
     }
 
     prepareCadastrar = () => {
