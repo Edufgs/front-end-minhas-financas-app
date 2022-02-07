@@ -2,7 +2,9 @@
 Desenvolvimento front-end usando React de um site para registrar as finanças, onde o objetivo é aplicar o conhecimento do programador.
  
 # Ferramentas usadas:
-<b>Node JS:</b> Node JS é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web, ele roda do lado de um servidor e utiliza o ECMAScript (ES).
+<b>React:</b> é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais. É utilizado nos sites da Netflix, Imgur, Feedly, Airbnb, SeatGeek, HelloSign, Walmart e outros.
+
+<b>Node JS:</b> é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web, ele roda do lado de um servidor e utiliza o ECMAScript (ES).
 
 <b>Bootstrap:</b>  é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
 
