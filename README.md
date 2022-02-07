@@ -15,4 +15,5 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
 
 # Instalação: 
 <b>Node JS:</b> Baixe o Node JS no site oficial https://nodejs.org/en/download/ e instale.
-O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do Node js quando instalado.
+
+O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do Node js quando instalado. Ele é usando para baixar as dependencias do projeto.
