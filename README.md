@@ -3,7 +3,7 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
  
 # Ferramentas usadas:
 
-Node JS: Node JS é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web, ele roda do lado de um servidor e utiliza o ECMAScript (ES).
+<br>Node JS:</br> Node JS é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web, ele roda do lado de um servidor e utiliza o ECMAScript (ES).
 
 Bootstrap: é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web usando HTML, CSS e JavaScript, baseado em modelos de design para a tipografia, melhorando a experiência do usuário em um site amigável e responsivo.
 
