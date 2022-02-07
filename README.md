@@ -27,5 +27,5 @@ Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-re
 Depois de criado é só entrar na pasta e usar o comando "yarn start".
 
 Para abrir a aplicação é só executar no navegador:
-Local:            http://localhost:3000
-On Your Network:  http://192.168.18.181:3000
+<br>Local:            http://localhost:3000
+<br>On Your Network:  http://192.168.18.181:3000
