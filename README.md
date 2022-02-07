@@ -22,7 +22,9 @@ O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quand
 
 <b>create react app:</b> usado para gerar as aplicações react. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g create-react-app". Se aparecer o erro: "npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap." então execute "npm i tar" para atualizar.
 
-#Criação do projeto:
+<b>Bootswatch:</b> Isstalar as dependencias do bootswatch onde é só entrar no projeto pelo cmd e usar o comando "yarn add bootswatch"
+
+# Criação do projeto:
 Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
 Depois de criado é só entrar na pasta e usar o comando "yarn start".
 
