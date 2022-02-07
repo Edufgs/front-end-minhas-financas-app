@@ -21,3 +21,11 @@ O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quand
 <b>yarn</b> é um gerenciador de pacotes do node js melhor que o npm tando em performance quanto em recursos. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g yarn"
 
 <b>create react app:</b> usado para gerar as aplicações react. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g create-react-app". Se aparecer o erro: "npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap." então execute "npm i tar" para atualizar.
+
+#Criação do projeto:
+Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
+Depois de criado é só entrar na pasta e usar o comando "yarn start".
+
+Para abrir a aplicação é só executar no navegador:
+Local:            http://localhost:3000
+On Your Network:  http://192.168.18.181:3000
