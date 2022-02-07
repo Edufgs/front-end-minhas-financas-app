@@ -1,14 +1,36 @@
 import React from "react"
+//Faz as requisições
+import axios from "axios"
 
 class Home extends React.Component{
     
     state = {
         saldo: 0
     }
+    
+    //É invocado imediatamente após um componente ser montado
+    //Carrega dados para mostrar na view que está sendo carregada
+    //Vai ser usado para puxar o saldo do servidor
+    componentDidMount(){
+        //recupera o id do usuario salvo no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
+        const usuarioLogadoString = localStorage.getItem("_usuario_logado")
+        //Transforma string em objeto json
+        const usuarioLogado = JSON.parse(usuarioLogadoString)
+
+        console.log(usuarioLogado)
+
+        axios.get(`http://localhost:8080/api/usuarios/${usuarioLogado.id}/saldo`)
+            //se der sucesso, response pode ser qualquer nome
+            .then(response => {
+                this.setState({saldo: response.data})
+            }).catch(erro =>{
+                console.log(erro.response)
+            })
+    }
 
     render(){
         return(
-            <div class="jumbotron">
+            <div className="jumbotron">
                 <h1 className="display-3">Bem vindo!</h1>
                 <p className="lead">Esse é seu sistema de finanças.</p>
                 <p className="lead">Seu saldo para o mês atual é de R$ {this.state.saldo}</p>

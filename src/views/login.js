@@ -5,28 +5,38 @@ import FormGruop from "../components/form-gruop"
 //Esse withRouter ele pega um componete e retorna com mais funcionalidades
 //Uma funcionalidade improtante é navegar para outros componentes
 import {withRouter} from 'react-router-dom'
-//Faz as requisições
-import axios from "axios"
+
+import UsuarioService from "../app/service/usuarioService"
 
 class Login extends React.Component{
 
     //Duas variaveis de estado, uma para email e outra para senha
     state = {
         email: '',
-        senha: ''
+        senha: '',
+        mensagemErro: null
+    }
+
+    constructor(){
+        super();
+        //ES não precisa colocar:
+        //UsuarioService service = new UsuarioService()
+        this.service = new UsuarioService();
     }
 
     entrar = () => {
-        //Faz uma requisição do tipo post com o endereço e os dados
-        axios
-        .post('http://localhost:8080/api/usuarios/autenticar', {
-            //Dados da requisição
+        this.service.autenticar({
             email:this.state.email,
             senha: this.state.senha
         }).then( response => { //Recebe a resposta do servidor (exemplo: ok, BadRequest, Created,... e dados)
-            console.log(response)
-        } ).catch(erro => { //Se der erro
+            //Salva o id no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
+            //JSON.stringify = transforma um obejto em string
+            localStorage.setItem("_usuario_logado", JSON.stringify(response.data))
+            //Manda para a tela home 
+            this.props.history.push('home')
+        }).catch(erro => { //Se der erro
             console.log(erro.response)
+            this.setState({mensagemErro: erro.response.data})
         })
     }
 
@@ -46,6 +56,9 @@ class Login extends React.Component{
                             {/*Deposi de uma classe, é possivel adicionar como tag */}
                             {/* Quando adiciona uma "variavel" como title que recebe algo,é adicionado no props e então é só usar o codigo {this.props.title} que pela o recebimento desse props*/}
                             <Card title="Login">
+                                <div className="row">
+                                    <span>{this.state.mensagemErro}</span>
+                                </div>
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="bs-component">
