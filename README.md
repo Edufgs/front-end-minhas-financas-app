@@ -28,4 +28,3 @@ Depois de criado é só entrar na pasta e usar o comando "yarn start".
 
 Para abrir a aplicação é só executar no navegador:
 <br>Local:            http://localhost:3000
-<br>On Your Network:  http://192.168.18.181:3000
