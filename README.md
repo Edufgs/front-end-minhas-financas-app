@@ -28,6 +28,8 @@ O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quand
 
 <b>Bootswatch:</b> Para instalar as dependencias do bootswatch é só entrar no projeto pelo cmd e usar o comando "yarn add bootswatch"
 
+<b>Toastr:</b> Vá ate o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar. Assim vai ser instalado automaticamente.
+
 # Criação do projeto:
 Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
 Depois de criado é só entrar na pasta e usar o comando "yarn start".
