@@ -7,6 +7,11 @@ import FormGruop from "../components/form-gruop"
 import {withRouter} from 'react-router-dom'
 
 import UsuarioService from "../app/service/usuarioService"
+import LocalStorageService from "../app/service/localstorageService"
+
+//Como é para importar varias funções então faz desse jeito:
+//Assim é só colocar o nome da função que quer ser importada
+import { mensagemErro } from '../components/toastr'
 
 class Login extends React.Component{
 
@@ -14,7 +19,6 @@ class Login extends React.Component{
     state = {
         email: '',
         senha: '',
-        mensagemErro: null
     }
 
     constructor(){
@@ -30,13 +34,12 @@ class Login extends React.Component{
             senha: this.state.senha
         }).then( response => { //Recebe a resposta do servidor (exemplo: ok, BadRequest, Created,... e dados)
             //Salva o id no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
-            //JSON.stringify = transforma um obejto em string
-            localStorage.setItem("_usuario_logado", JSON.stringify(response.data))
+            LocalStorageService.adicionarItem("_usuario_logado", response.data)
             //Manda para a tela home 
             this.props.history.push('home')
         }).catch(erro => { //Se der erro
-            console.log(erro.response)
-            this.setState({mensagemErro: erro.response.data})
+            //Mostra o erro usando toastr para mostrar as mensagens
+            mensagemErro(erro.response.data)
         })
     }
 
@@ -56,9 +59,6 @@ class Login extends React.Component{
                             {/*Deposi de uma classe, é possivel adicionar como tag */}
                             {/* Quando adiciona uma "variavel" como title que recebe algo,é adicionado no props e então é só usar o codigo {this.props.title} que pela o recebimento desse props*/}
                             <Card title="Login">
-                                <div className="row">
-                                    <span>{this.state.mensagemErro}</span>
-                                </div>
                                 <div className="row">
                                     <div className="col-lg-12">
                                         <div className="bs-component">

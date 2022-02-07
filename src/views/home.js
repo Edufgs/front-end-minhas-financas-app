@@ -1,11 +1,20 @@
 import React from "react"
-//Faz as requisições
-import axios from "axios"
+
+import LocalStorageService from "../app/service/localstorageService"
+
+import UsuarioService from "../app/service/usuarioService"
 
 class Home extends React.Component{
     
     state = {
         saldo: 0
+    }
+
+    constructor(){
+        super()
+        //ES não precisa colocar:
+        //UsuarioService usuarioService = new UsuarioService()
+        this.usuarioService = new UsuarioService()
     }
     
     //É invocado imediatamente após um componente ser montado
@@ -13,13 +22,12 @@ class Home extends React.Component{
     //Vai ser usado para puxar o saldo do servidor
     componentDidMount(){
         //recupera o id do usuario salvo no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
-        const usuarioLogadoString = localStorage.getItem("_usuario_logado")
-        //Transforma string em objeto json
-        const usuarioLogado = JSON.parse(usuarioLogadoString)
+        const usuarioLogado = LocalStorageService.obterItem("_usuario_logado")
 
         console.log(usuarioLogado)
-
-        axios.get(`http://localhost:8080/api/usuarios/${usuarioLogado.id}/saldo`)
+        
+        this.usuarioService
+            .obterSaldoPorUsuario(usuarioLogado.id)
             //se der sucesso, response pode ser qualquer nome
             .then(response => {
                 this.setState({saldo: response.data})
