@@ -20,19 +20,19 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
 # Instalação: 
 <b>Node JS:</b> Baixe o Node JS no site oficial https://nodejs.org/en/download/ e instale.
 
-O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quando instalado. Ele é usando para baixar as dependencias do projeto.
+O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quando instalado. Ele é usado para baixar as dependências do projeto.
 
-<b>yarn</b> é um gerenciador de pacotes do node js melhor que o npm tando em performance quanto em recursos. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g yarn"
+<b>yarn</b> é um gerenciador de pacotes do node js melhor que o npm tanto em performance quanto em recursos. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g yarn"
 
 <b>create react app:</b> usado para gerar as aplicações react. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g create-react-app". Se aparecer o erro: "npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap." então execute "npm i tar" para atualizar.
 
-<b>Bootswatch:</b> Para instalar as dependencias do bootswatch é só entrar no projeto pelo cmd e usar o comando "yarn add bootswatch"
+<b>Bootswatch:</b> Para instalar as dependências do bootswatch é só entrar no projeto pelo cmd e usar o comando "yarn add bootswatch"
 
-<b>Toastr:</b> Vá ate o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar. Assim vai ser instalado automaticamente.
+<b>Toastr:</b> Vá até o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar. Assim vai ser instalado automaticamente.
 
 # Criação do projeto:
 Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
 Depois de criado é só entrar na pasta e usar o comando "yarn start".
 
 Para abrir a aplicação é só executar no navegador:
-<br>Local:            http://localhost:3000
+<br>Local: http://localhost:3000
