@@ -12,3 +12,6 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
  
 # Editor de código-fonte:
 <b>Visual Studio Code:</b> O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
+
+# Instalação: 
+<b>Node JS:</b> Baixe e instale o Node JS no site oficial https://nodejs.org/en/download/ e instalar.
