@@ -1,6 +1,6 @@
 import React from "react"
 import Card from "../components/card"
-import FormGruop from "../components/form-gruop"
+import FormGruop from "../components/form-group"
 //importando withRouter que vai retornar o componente decorado
 //Esse withRouter ele pega um componete e retorna com mais funcionalidades
 //Uma funcionalidade improtante é navegar para outros componentes
@@ -35,7 +35,7 @@ class Login extends React.Component{
         }).then( response => { //Recebe a resposta do servidor (exemplo: ok, BadRequest, Created,... e dados)
             //Salva o id no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
             LocalStorageService.adicionarItem("_usuario_logado", response.data)
-            //Manda para a tela home 
+            //Manda para a tela home
             this.props.history.push('home')
         }).catch(erro => { //Se der erro
             //Mostra o erro usando toastr para mostrar as mensagens

@@ -1,7 +1,7 @@
 import React from "react"
 
 //Se for usar componente funcional é legal colocar (props)
-function FormGruop(props){
+function FormGroup(props){
     return(
         <div className="form-group mb-4">
             {/* Só utiliza this.props.label quando está em um componente de classe */}
@@ -14,4 +14,4 @@ function FormGruop(props){
     )
 }
 
-export default FormGruop
+export default FormGroup
