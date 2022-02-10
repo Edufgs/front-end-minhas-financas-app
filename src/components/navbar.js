@@ -18,7 +18,7 @@ function Navbar(){
                     <ul className="navbar-nav">
                         <NavbarItem href="#/home" label="Home"></NavbarItem>
                         <NavbarItem href="#/cadastro-usuarios" label="Usuários"></NavbarItem> {/* Colocou "href="#/cadastros-usuarios"" pq foi definido lá no path nas Rotas.js  */}
-                        <NavbarItem href="#/" label="Lançamentos"></NavbarItem>
+                        <NavbarItem href="#/consulta-lancamentos" label="Lançamentos"></NavbarItem>
                         <NavbarItem href="#/login" label="Login"></NavbarItem>                        
                     </ul>
 
