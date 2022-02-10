@@ -19,7 +19,7 @@ import * as mensagens from '../../components/toastr'
 import { Dialog } from 'primereact/dialog';
 import { Button } from 'primereact/button';
 
-class ConsultaLancamento extends React.Component{
+class ConsultaLancamentos extends React.Component{
 
     state = {
         ano: '',
@@ -65,7 +65,7 @@ class ConsultaLancamento extends React.Component{
     }
 
     editar = (id) => {
-        console.log('Editar: ', id)
+        this.props.history.push(`/cadastro-lancamentos/${id}`)
     }
 
     abrirConfirmação = (lancamento) => {
@@ -91,10 +91,14 @@ class ConsultaLancamento extends React.Component{
         })
     }
 
+    preparaFormularioCadastro = () => {
+        this.props.history.push('/cadastro-lancamentos')
+    }
+
     render(){
         //Lista dos meses para passar no SelectMenu
         const meses = this.service.obterListaMeses()
-
+        
         const tipos = this.service.obterListaTipo()
 
         const confirmDialogFooter= (
@@ -146,7 +150,7 @@ class ConsultaLancamento extends React.Component{
                             </FormGruop>
 
                             <button onClick={this.buscar} type="button" className="btn btn-success">Buscar</button>
-                            <button type="button" className="btn btn-danger">Cadastrar</button>
+                            <button onClick={this.preparaFormularioCadastro} type="button" className="btn btn-danger">Cadastrar</button>
                         </div>
                     </div>
                 </div>
@@ -172,7 +176,6 @@ class ConsultaLancamento extends React.Component{
                         <p>Confirma a exclusão deste lançamento?</p>
                     </Dialog>
                 </div>
-
             </Card>
         )
     }
@@ -180,4 +183,4 @@ class ConsultaLancamento extends React.Component{
 
 //Esse withRouter ele pega um componete e retorna com mais funcionalidades
 //Uma funcionalidade importante é navegar para outros componentes
-export default withRouter(ConsultaLancamento);
+export default withRouter(ConsultaLancamentos);

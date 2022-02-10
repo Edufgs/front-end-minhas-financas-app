@@ -19,7 +19,9 @@ function Rotas(){
                 <Route path="/cadastro-usuarios" component={CadastroUsuario}></Route>
                 <Route path='/home' component={Home}></Route>
                 <Route path='/consulta-lancamentos' component={ConsultaLancamentos}></Route>
-                <Route path='/cadastro-lancamentos' component={CadastroLancamentos}></Route>
+                {/** /:id = Agora é possivel passar parametros junto com a rota */}
+                {/** /:id? = Agora é possivel passar parametros junto com a rota mas em cima é obrigatorio e esse é opcional por causa do ? */}
+                <Route path='/cadastro-lancamentos/:id?' component={CadastroLancamentos}></Route>
             </Switch>
         </HashRouter>
     )
