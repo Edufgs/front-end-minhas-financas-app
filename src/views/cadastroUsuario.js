@@ -25,69 +25,22 @@ class CadastroUsuario extends React.Component{
         this.service = new UsuarioService
     }
 
-    //Verifica os dados
-    validar(){
-        //Vetor para colocar as mensagens
-        const msgs = []
-
-        //Verifica o nome
-        //Se for false ou nulo ou vazio então ele entra
-        if(!this.state.nome){
-            msgs.push('O campo nome é obrigatório.')
-        }
-
-        //Verifica email
-        if(!this.state.email){  
-            msgs.push('O campo email é obrigatório.')
-
-            /**
-             * Se o email não passar na expressão regurar/regex (Verifica se uma string está dentro de um padrão) então não vai ser valido
-             * O padrão vai ser 'usuario@dominio.com' mas usando regex
-             * Esse é o padrão que aceita alguns email: /^[a-z0-9]+@[a-z0-9]+\.[a-z]/
-             * Outro regex que aceita mais email é: /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi
-             * O regex a  cima foi encontrada o site: https://pt.stackoverflow.com/questions/1386/express%C3%A3o-regular-para-valida%C3%A7%C3%A3o-de-e-mail
-             * Explicação sobre regex: https://www.w3schools.com/jsref/jsref_obj_regexp.asp
-             */
-        }else if(!this.state.email.match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/gi)){
-            msgs.push('Informe um email valido.')
-        }
-
-        //Verifica se a senha e senhaRepeticao foi inserida
-        if(!this.state.senha || !this.state.senhaRepeticao){
-            msgs.push('Digite a senha duas vezes.')
-
-            //Verifica se a senha é diferente da senhaRepeticao
-        }else if(this.state.senha !== this.state.senhaRepeticao){
-            msgs.push('As senhas não batem.')
-        }
-
-        return msgs
-    }
-
     //cadastra o usuario
     cadastrar = () => {
+        /**
+         * Operador destructuring, desestrutura algo em varias propriedades filho.
+         * Nesse caso esta desestruturando o state e tambem é colocado oq quer extrair da propriedade state
+         *  */ 
+        const{ nome, email, senha,  senhaRepeticao } = this.state
+        //Agora é só passar para o lancamento como o mesmo nome
+        const usuario = { nome, email, senha, senhaRepeticao }
 
-        const msgs = this.validar()
-
-        //Se tiver mensagens mostra as mensagens para o usuario
-        if(msgs && msgs.length > 0){
-            /**
-             * Faz uma interação dentro do array de mensagens
-             * Passa dois parametros para arrow function que é a mensagem (Elemento na posição) e o indice (posição)
-             */
-            msgs.forEach( (msg, index) => {
-                mensagemErro(msg)
-            })
-            
-            //Para a execução da função
+        try{
+            this.service.validar(usuario)
+        }catch(erro){
+            const msg = erro.mensagens
+            msg.forEach(msg => mensagemErro(msg))
             return false;
-        }
-
-        //Melhor pratica é criar o objeto do que passar o state criado a cima
-        const usuario = {
-            nome: this.state.nome,
-            email: this.state.email,
-            senha: this.state.senha
         }
 
         this.service.salvar(usuario)

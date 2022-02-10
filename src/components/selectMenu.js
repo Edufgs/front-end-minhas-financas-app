@@ -29,7 +29,7 @@ export default (props) =>{
     })
 
     return (
-        //{...props} = pega todas as outras propriedades que for passada para o componente e vai espalhar para o select
+        //{...props} = spread operator = pega todas as outras propriedades que for passada para o componente e vai espalhar para o select
         <select {...props}>
             {options}
         </select>
