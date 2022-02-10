@@ -14,9 +14,13 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
 <br>Site Oficial: https://codeseven.github.io/toastr/
 <br>Site para configurar e demonstração: https://codeseven.github.io/toastr/demo.html
 
-<b>react-currency-format:</b> Usado para formatar o números em uma entrada ou como um texto.
+<b>React-currency-format:</b> Usado para formatar o números em uma entrada ou como um texto.
 <br>Site: https://www.npmjs.com/package/react-currency-format
 <br>Site para demonstração: https://codepen.io/s-yadav/pen/bpKNMa
+
+<b>PrimeReact:</b> Biblioteca com vários componentes react prontos e estilizados.
+<br>Site Oficial: https://www.primefaces.org/primereact/ 
+<br>Site de configuração: https://www.primefaces.org/primereact/setup/
  
 # Editor de código-fonte:
 <b>Visual Studio Code:</b> O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
@@ -35,6 +39,8 @@ O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quand
 <b>Toastr:</b> Vá até o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar. Assim vai ser instalado automaticamente.
 
 <b>react-currency-format:</b> Vá até o endereço do projeto a partir do console e digite "yarn add currency-formatter". Assim é instalado automaticamente.
+
+<b>PrimeReact:</b> No diretório do projeto dentro do cmd escreva o comando "yarn add primereact primeicons react-transition-group", assim é adicionado as dependências necessárias para o uso do primereact.
 
 # Criação do projeto:
 Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
