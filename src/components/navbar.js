@@ -1,5 +1,11 @@
 import React from "react"
+
 import NavbarItem from "./navbarItem"
+import AuthService from "../app/service/authService"
+
+const deslogar = () => {
+    AuthService.removerUsuarioAutenticado()
+}
 
 function Navbar(){
     return(
@@ -19,7 +25,7 @@ function Navbar(){
                         <NavbarItem href="#/home" label="Home"></NavbarItem>
                         <NavbarItem href="#/cadastro-usuarios" label="Usuários"></NavbarItem> {/* Colocou "href="#/cadastros-usuarios"" pq foi definido lá no path nas Rotas.js  */}
                         <NavbarItem href="#/consulta-lancamentos" label="Lançamentos"></NavbarItem>
-                        <NavbarItem href="#/login" label="Login"></NavbarItem>                        
+                        <NavbarItem onClick={deslogar} href="#/login" label="Sair"></NavbarItem>                        
                     </ul>
 
                 </div>
