@@ -12,6 +12,10 @@ class LocalStorageService{
         //Transforma string em objeto json
         return JSON.parse(item)
     }
+    
+    static removertem(chave){
+        localStorage.removeItem(chave)
+    }
 }
 
 export default LocalStorageService
