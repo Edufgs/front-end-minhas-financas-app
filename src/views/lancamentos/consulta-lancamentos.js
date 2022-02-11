@@ -58,7 +58,11 @@ class ConsultaLancamentos extends React.Component{
         this.service
             .consultar(lancamentoFiltro)
             .then(resposta => {
-                this.setState({lancamentos: resposta.data})
+                const lista = resposta.data
+                if(lista.length < 1){
+                    mensagens.mensagemAlerta('Nenhum resultado encontrado.')
+                }
+                this.setState({lancamentos: lista})
             }).catch(error => {
                 console.log(error)
             })
@@ -93,6 +97,28 @@ class ConsultaLancamentos extends React.Component{
 
     preparaFormularioCadastro = () => {
         this.props.history.push('/cadastro-lancamentos')
+    }
+
+    alterarStatus = (lancamento,status) =>{
+        this.service
+            .alterarStatus(lancamento.id, status)
+            //Ser der certo a mudança
+            .then(response => {
+                //pega o array de lançamentos
+                const lancamentos = this.state.lancamentos
+                //pega a posição dele
+                //O indexOf retorna a posição do elemento no array se não achar então retorna -1
+                const index = lancamentos.indexOf(lancamento);
+                //Se achar o elemento no array
+                if(index !== -1){
+                    //Atualiza o status
+                    lancamento['status'] = status
+                    //Atualiza o array o lancamento
+                    lancamentos[index] = lancamento
+                    this.setState({lancamentos})
+                }
+                mensagens.mensagemSucesso('Status atualizado com sucesso!')
+            })
     }
 
     render(){
@@ -149,8 +175,19 @@ class ConsultaLancamentos extends React.Component{
                                         onChange={e => this.setState({descricao: e.target.value})}/>
                             </FormGruop>
 
-                            <button onClick={this.buscar} type="button" className="btn btn-success">Buscar</button>
-                            <button onClick={this.preparaFormularioCadastro} type="button" className="btn btn-danger">Cadastrar</button>
+                            <button onClick={this.buscar} 
+                                    type="button" 
+                                    className="btn btn-success">
+                                    {/** Icone do PrimeReact */}
+                                    <i className="pi pi-search mr-2"></i>    Buscar
+                            </button>
+
+                            <button onClick={this.preparaFormularioCadastro} 
+                                    type="button" 
+                                    className="btn btn-danger">
+                                    {/** Icone do PrimeReact */}
+                                    <i className="pi pi-plus mr-2"></i>    Cadastrar
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -159,8 +196,10 @@ class ConsultaLancamentos extends React.Component{
                     <div className="col-md-12">
                         <div className="bs-component">
                             <LancamentosTable lancamentos={this.state.lancamentos} 
+                                                //Como é uma arrow function então está mandando a variavel com um metodo
                                                 deleteAction = {this.abrirConfirmação}
-                                                editAction ={this.editar}></LancamentosTable>
+                                                editAction ={this.editar}
+                                                alterarStatus={this.alterarStatus}/>
                         </div>
                     </div>
                 </div>
