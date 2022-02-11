@@ -101,8 +101,19 @@ class CadastroUsuario extends React.Component{
                                             onChange={e => this.setState({senhaRepeticao: e.target.value})}>                                                
                                     </input>
                                 </FormGruop>
-                                <button onClick={this.cadastrar} type="button" className="btn btn-success">Salvar</button>
-                                <button onClick={this.cancelar} type="button" className="btn btn-danger">Cancelar</button>
+                                <button onClick={this.cadastrar} 
+                                        type="button"
+                                        className="btn btn-success">
+                                        {/** Icone do PrimeReact */}
+                                        <i className="pi pi-save mr-2"></i> Salvar
+                                </button>
+
+                                <button onClick={this.cancelar} 
+                                        type="button" 
+                                        className="btn btn-danger">
+                                        {/** Icone do PrimeReact */}
+                                        <i className="pi pi-times mr-2"></i> Cancelar
+                                </button>
                             </div>
                         </div>                            
                     </div>                        

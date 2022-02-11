@@ -215,14 +215,26 @@ class CadastroLancamentos extends  React.Component{
                         */}
                         {this.state.atualizando ? 
                             (
-                                <button onClick={this.atualizar} className="btn btn-success">Atualizar</button>
+                                <button onClick={this.atualizar} 
+                                        className="btn btn-success">
+                                        {/** Icone do PrimeReact */}
+                                        <i className="pi pi-refresh mr-2"></i> Atualizar 
+                                </button>
                             ) :(
-                                <button onClick={this.submit} className="btn btn-success">Salvar</button>
+                                <button onClick={this.submit} 
+                                        className="btn btn-success">
+                                        {/** Icone do PrimeReact */}
+                                        <i className="pi pi-save mr-2"></i> Salvar
+                                </button>
                             )
 
                         }
   
-                        <button onClick={this.preparaConsultaLancamantos} className="btn btn-danger">Cancelar</button>
+                        <button onClick={this.preparaConsultaLancamantos} 
+                                className="btn btn-danger">
+                                {/** Icone do PrimeReact */}
+                                <i className="pi pi-times mr-2"></i> Cancelar
+                        </button>
                     </div>
                 </div>
             </Card>

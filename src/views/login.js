@@ -84,8 +84,19 @@ class Login extends React.Component{
                                                     </input>
                                                 </FormGruop>
 
-                                                <button onClick={this.entrar} className="btn btn-success">Entrar</button>
-                                                <button onClick={this.prepareCadastrar} type="button" className="btn btn-danger">Cadastrar</button>
+                                                <button onClick={this.entrar} 
+                                                        className="btn btn-success">
+                                                        {/** Icone do PrimeReact */}
+                                                        <i className="pi pi-sign-in mr-2"></i> Entrar
+                                                </button>
+
+                                                <button onClick={this.prepareCadastrar} 
+                                                        type="button" 
+                                                        className="btn btn-danger">
+                                                        {/** Icone do PrimeReact */}
+                                                        <i className="pi pi-plus mr-2"></i> Cadastrar
+                                                </button>
+
                                             </fieldset>
                                         </div>
                                     </div>
