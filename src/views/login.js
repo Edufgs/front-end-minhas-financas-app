@@ -7,11 +7,11 @@ import FormGruop from "../components/form-group"
 import {withRouter} from 'react-router-dom'
 
 import UsuarioService from "../app/service/usuarioService"
-import LocalStorageService from "../app/service/localstorageService"
 
 //Como é para importar varias funções então faz desse jeito:
 //Assim é só colocar o nome da função que quer ser importada
 import { mensagemErro } from '../components/toastr'
+import { AuthContext } from "../main/provedorAutenticacao"
 
 class Login extends React.Component{
 
@@ -33,8 +33,8 @@ class Login extends React.Component{
             email:this.state.email,
             senha: this.state.senha
         }).then( response => { //Recebe a resposta do servidor (exemplo: ok, BadRequest, Created,... e dados)
-            //Salva o id no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
-            LocalStorageService.adicionarItem("_usuario_logado", response.data)
+            //Agora as variaveis de contexto vai ficar nessa variavel context assim acessa os metodos do provedor de autenticacao
+            this.context.iniciarSessao(response.data)
             //Manda para a tela home
             this.props.history.push('home')
         }).catch(erro => { //Se der erro
@@ -110,6 +110,11 @@ class Login extends React.Component{
         
     }
 }
+
+//Assim o componente de classe vai se inscrever no contexto do provedorAutenticacao assim vai ter acesso as propriedades exportadas do provedor de autenticação
+//Agora as variaveis de contexto vai ficar nessa variavel context assim acessa os metodos do provedor de autenticacao
+//Essa forma só funciona para componentes de classe
+Login.contextType = AuthContext
 
 //Esse withRouter ele pega um componete e retorna com mais funcionalidades
 //Uma funcionalidade improtante é navegar para outros componentes

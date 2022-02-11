@@ -1,3 +1,4 @@
+import LancamentoService from "./lancamentoService";
 import LocalStorageService from "./localstorageService";
 
 export const USUARIO_LOGADO = '_usuario_logado'
@@ -19,5 +20,13 @@ export default class AuthService{
     //Remove usuario autenticado
     static removerUsuarioAutenticado(){
         LocalStorageService.removertem(USUARIO_LOGADO)
+    }
+
+    static logar(usuario){
+        LocalStorageService.adicionarItem(USUARIO_LOGADO, usuario)
+    }
+
+    static obterUsuarioAutenticado(){
+        return LancamentoService.obterItem(USUARIO_LOGADO)
     }
 }
