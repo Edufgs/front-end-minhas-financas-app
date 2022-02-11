@@ -23,8 +23,6 @@ class Home extends React.Component{
     componentDidMount(){
         //recupera o id do usuario salvo no localStorage que é tipo um banco de dados no navegador e só é acessado pelo front-end
         const usuarioLogado = LocalStorageService.obterItem("_usuario_logado")
-
-        console.log(usuarioLogado)
         
         this.usuarioService
             .obterSaldoPorUsuario(usuarioLogado.id)
@@ -48,14 +46,12 @@ class Home extends React.Component{
                     <a className="btn btn-primary btn-lg" 
                         href="#/cadastro-usuarios" 
                         role="button">
-                        <i className="fa fa-users"></i>
-                        Cadastrar Usuário
+                        <i className="pi pi-users"></i> Cadastrar Usuário
                     </a>
                     <a className="btn btn-danger btn-lg" 
                         href="https://bootswatch.com/flatly/#" 
                         role="button">
-                        <i className="fa fa-users"></i>
-                        Cadastrar Lançamento
+                        <i className="pi pi-money-bill"></i> Cadastrar Lançamento
                     </a>
                 </p>
             </div>
