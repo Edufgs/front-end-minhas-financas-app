@@ -19,12 +19,39 @@ export default props => {
                 <td>{lancamento.mes}</td>
                 <td>{lancamento.status}</td>
                 <td>
+                    <button className="btn btn-success" 
+                            title="Efetivar" //Mostra quando passa o mouse em cima
+                            disabled={lancamento.status !== 'PENDENTE'} //Desativa o botão quando o status for diferente de PENDENTE
+                            onClick={e => props.alterarStatus(lancamento,'EFETIVADO')}
+                            type="button">
+                            {/** Icone do PrimeReact */}
+                            <i className="pi pi-check mr-2"></i>
+                    </button>
+
+                    <button className="btn btn-warning" 
+                            title="Cancelar" //Mostra quando passa o mouse em cima
+                            disabled={lancamento.status !== 'PENDENTE'} //Desativa o botão quando o status for diferente de PENDENTE
+                            onClick={e => props.alterarStatus(lancamento,'CANCELADO')}
+                            type="button">
+                            {/** Icone do PrimeReact */}
+                            <i className="pi pi-times mr-2"></i>
+                    </button>
+
                     <button type="button" 
                             className="btn btn-primary"
-                            onClick={e => props.editAction(lancamento.id)}>Editar</button>
+                            title="Editar" //Mostra quando passa o mouse em cima
+                            onClick={e => props.editAction(lancamento.id)}>
+                            {/** Icone do PrimeReact */}
+                            <i className="pi pi-pencil mr-2"></i>
+                    </button>
+
                     <button type="button" 
                             className="btn btn-danger" 
-                            onClick={e => props.deleteAction(lancamento)}>Deletar</button>
+                            title="Excluir" //Mostra quando passa o mouse em cima
+                            onClick={e => props.deleteAction(lancamento)}>
+                            {/** Icone do PrimeReact */}
+                            <i className="pi pi-trash mr-2"></i>
+                    </button>
                 </td>
             </tr>
         )
