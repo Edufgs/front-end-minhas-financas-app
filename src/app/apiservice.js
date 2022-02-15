@@ -4,7 +4,7 @@ import axios from "axios";
 //Configurações para o axios
 const httpClient = axios.create({
     //URL base para fazer as requisições
-    baseURL: 'http://localhost:8080'
+    baseURL: 'https://minhasfinancas-edufgs.herokuapp.com/'
 })
 
 class ApiService{
