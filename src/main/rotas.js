@@ -1,7 +1,7 @@
 /* Jeito antigo (ensinado no curso) do "react-router-dom" verção 5*/
 import React from "react"
 //{ } = do objeto react-router-dom ele vai extrair as propriedades que vai ser colocado
-import{ Route, Switch, HashRouter, Redirect } from 'react-router-dom'
+import{ Route, Switch, BrowserRouter, Redirect } from 'react-router-dom'
 import Login from "../views/login"
 import CadastroUsuario from "../views/cadastroUsuario"
 import Home from "../views/home"
@@ -39,7 +39,7 @@ function RotaAutenticada( {component: Component, isUsuarioAutenticado, ...props}
 function Rotas(props){
     return(
         //A rota vai ficar tipo '#/login' depois do endereço
-        <HashRouter>
+        <BrowserRouter>
             <Switch>
                 {/**
                  * Esse componente={Login} vai ser oq vai rendenizar
@@ -53,7 +53,7 @@ function Rotas(props){
                 {/** /:id? = Agora é possivel passar parametros junto com a rota mas em cima é obrigatorio e esse é opcional por causa do ? */}
                 <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path='/cadastro-lancamentos/:id?' component={CadastroLancamentos}/>
             </Switch>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
 
