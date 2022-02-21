@@ -1,10 +1,19 @@
 //Faz as requisições
 import axios from "axios";
 
+/**
+ * process = variavel global do node js
+ * E está sendo acessado o arquivo .env
+ * Se for rodado a aplicação local então vai ser usado o .env
+ * Se for rodado no ambiente de produção então vai ser usado o .env.production
+ * E ainda é colocado o nome da variavel
+ */
+const baseURL = process.env.REACT_APP_API_URL
+
 //Configurações para o axios
 const httpClient = axios.create({
     //URL base para fazer as requisições
-    baseURL: 'http://localhost:8080',
+    baseURL: baseURL,
     withCredentials: true //Permite que mande credenciais pelo cabeçalho
     //https://minhasfinancas-edufgs.herokuapp.com/
 })

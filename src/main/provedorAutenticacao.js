@@ -1,10 +1,7 @@
 import React from "react";
 
 import AuthService from "../app/service/authService";
-import ApiService from "../app/apiservice";
 import jwt_decode from "jwt-decode";
-//import jose from 'jose'
-//import { Jwt } from "jsonwebtoken";
 
 /**
  * Manda para todos os componentes que o usuario está logado (Só manda para os interessados)
@@ -52,7 +49,6 @@ class ProvedorAutenticacao extends React.Component{
     //Sempre executado na hora que entra no componente
     componentDidMount(){
         const isAutenticado = AuthService.isUsuarioAutenticado()
-
         if(isAutenticado){
             const usuario = AuthService.refreshSession()
             this.setState({isAutenticado: true, usuarioAutenticado: usuario})

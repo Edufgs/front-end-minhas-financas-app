@@ -12,7 +12,13 @@ export default class AuthService{
     static isUsuarioAutenticado(){
         //Recupera o token no Local Storages
         const token = LocalStorageService.obterItem(TOKEN)
-    
+
+        // Verifica se o token nulo, void ou undefined
+        //Se for então retorna false para dizer que não tem usuario logado
+        if(!token){
+            return false
+        }
+
         //Decodifica o Token
         const decodedToken = jwt_decode(token)
         const expiration = decodedToken.exp
