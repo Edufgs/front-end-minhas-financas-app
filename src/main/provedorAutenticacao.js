@@ -23,7 +23,8 @@ class ProvedorAutenticacao extends React.Component{
 
     state = {
         usuarioAutenticado: null,
-        isAutenticado: false
+        isAutenticado: false,
+        isLoading: true //Vai dizer se estou carregando o provedor de autenticação
     }
 
     iniciarSessao = (tokenDTO) =>{
@@ -52,11 +53,28 @@ class ProvedorAutenticacao extends React.Component{
         if(isAutenticado){
             const usuario = AuthService.refreshSession()
             this.setState({isAutenticado: true, usuarioAutenticado: usuario})
+            this.state.isLoading = false
+        }else{
+            //Função de callback
+            //Quando terminar de carregar a autenticação então é colocado para false o isLoading
+            //Colocando assim então vai ser atualizado na hora a variavel
+            this.setState(previousState => {
+                return{
+                    ...previousState,
+                    isLoading: false
+                }
+            })
         }
     }
 
     render(){
 
+        //Verifica se ainda está sendo carregado a pagina
+        //Pois a autenticação ainda está sendo carregada
+        if(this.state.isLoading){
+            //Então retorna nada
+            return null
+        }
         //propriedades e os medodos que é para dividir com os filhos/componentes que vai estar dentro de AuthProvider
         const contexto = {
             usuarioAutenticado: this.state.usuarioAutenticado,

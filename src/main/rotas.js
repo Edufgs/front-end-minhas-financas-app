@@ -1,6 +1,15 @@
 /* Jeito antigo (ensinado no curso) do "react-router-dom" verção 5*/
 import React from "react"
-//{ } = do objeto react-router-dom ele vai extrair as propriedades que vai ser colocado
+
+/**
+ * { } = do objeto react-router-dom ele vai extrair as propriedades que vai ser colocado
+ * O BrowserRouter é novo e tb é possivel usar o HashRouter que funcina em navegadores antigos
+ * Assim tem que trocar o import substituindo o BrowserRouter por HashRouter e todos os lugares com BrowserRouter
+ * 
+ * Em lugares que estão para acessar o endereço assim  href="#/cadastro-usuarios"
+ * Quando mudar de HashRouter para BeowserRouter então é preciso retirar o # do endereço,
+ * Verifique dodas as mudanças de endereço
+ */
 import{ Route, Switch, BrowserRouter, Redirect } from 'react-router-dom'
 import Login from "../views/login"
 import CadastroUsuario from "../views/cadastroUsuario"

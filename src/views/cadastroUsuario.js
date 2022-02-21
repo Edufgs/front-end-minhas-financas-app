@@ -22,7 +22,7 @@ class CadastroUsuario extends React.Component{
         super()
         //ES não precisa colocar:
         //UsuarioService service = new UsuarioService()
-        this.service = new UsuarioService
+        this.service = new UsuarioService()
     }
 
     //cadastra o usuario
@@ -59,7 +59,7 @@ class CadastroUsuario extends React.Component{
     cancelar = () => {
         //history.push('/login') = ele recebe como parametro a rota que desejo navegar
         //Não precisa colocar #/ pois ele ja estra dentro de HashRouter lá em Rotas.js
-        this.props.history.push('/login')
+        this.props.history.push('/home')
     }
 
     render(){

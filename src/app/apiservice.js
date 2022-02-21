@@ -15,7 +15,6 @@ const httpClient = axios.create({
     //URL base para fazer as requisições
     baseURL: baseURL,
     withCredentials: true //Permite que mande credenciais pelo cabeçalho
-    //https://minhasfinancas-edufgs.herokuapp.com/
 })
 
 class ApiService{
