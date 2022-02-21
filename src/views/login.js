@@ -54,7 +54,7 @@ class Login extends React.Component{
             <div>
                 <div className="row">
                     {/* O style a baixo fica igual esse mas de forma diferente: style=" position: relative;left: 300px;" */}
-                    <div className="col-md-6" style={{position: 'relative', left: '300px'}}>
+                    <div className="col-md-6 offset-md-3">
                         <div className="bs-docs-section">
                             {/*Deposi de uma classe, é possivel adicionar como tag */}
                             {/* Quando adiciona uma "variavel" como title que recebe algo,é adicionado no props e então é só usar o codigo {this.props.title} que pela o recebimento desse props*/}
