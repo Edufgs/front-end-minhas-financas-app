@@ -7,6 +7,7 @@ import CadastroUsuario from "../views/cadastroUsuario"
 import Home from "../views/home"
 import ConsultaLancamentos from "../views/lancamentos/consulta-lancamentos"
 import CadastroLancamentos from "../views/lancamentos/cadastro-lancamentos"
+import LandingPage from "../views/landingPage"
 import { AuthConsumer } from "./provedorAutenticacao"
 
 /** Adiciona as rotas se o usuario está autenticado
@@ -17,7 +18,7 @@ function RotaAutenticada( {component: Component, isUsuarioAutenticado, ...props}
     return(
         //Propriedade render recebe um componente que quer ser renderizado
         //Vai ser usando para verificar se o usuario está autenticado
-        <Route {...props} render={ (componentProps) => {
+        <Route exact {...props} render={ (componentProps) => {
             //Verifica se tem usuario autenticado, se tiver retorna o proprio endereço que quer acessa e se não tiver redireciona para o /login
             if(isUsuarioAutenticado){
                 return(
@@ -39,11 +40,13 @@ function Rotas(props){
     return(
         //A rota vai ficar tipo '#/login' depois do endereço
         <HashRouter>
-            {/* É parecido com o Switch case onde vai selecionar a rota dependendo do que for */}
             <Switch>
-                {/* Esse componente={Login} vai ser oq vai rendenizar */}
-                <Route path="/login" component={Login}/>
-                <Route path="/cadastro-usuarios" component={CadastroUsuario}/>
+                {/**
+                 * Esse componente={Login} vai ser oq vai rendenizar
+                 */}
+                <Route exact path="/" component={LandingPage}/>
+                <Route exact path="/login" component={Login}/>
+                <Route exact path="/cadastro-usuarios" component={CadastroUsuario}/>
                 <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path='/home' component={Home}/>
                 <RotaAutenticada isUsuarioAutenticado={props.isUsuarioAutenticado} path='/consulta-lancamentos' component={ConsultaLancamentos}/>
                 {/** /:id = Agora é possivel passar parametros junto com a rota */}
