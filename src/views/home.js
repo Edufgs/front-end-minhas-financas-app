@@ -22,7 +22,7 @@ class Home extends React.Component{
     componentDidMount(){
         //Agora as variaveis de contexto vai ficar nessa variavel "context" assim acessa os metodos e propriedade do provedor de autenticacao
         const usuarioLogado = this.context.usuarioAutenticado
-        
+
         this.usuarioService
             .obterSaldoPorUsuario(usuarioLogado.id)
             //se der sucesso, response pode ser qualquer nome

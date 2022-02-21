@@ -4,7 +4,9 @@ import axios from "axios";
 //Configurações para o axios
 const httpClient = axios.create({
     //URL base para fazer as requisições
-    baseURL: 'https://minhasfinancas-edufgs.herokuapp.com'
+    baseURL: 'http://localhost:8080',
+    withCredentials: true //Permite que mande credenciais pelo cabeçalho
+    //https://minhasfinancas-edufgs.herokuapp.com/
 })
 
 class ApiService{
@@ -12,6 +14,15 @@ class ApiService{
     //Vai receber a url da api do back-end
     constructor(apiurl){
         this.apiurl = apiurl
+    }
+
+    //Usado para registrar o tokens no cabeçalho das requisições
+    static registrarToken(token){
+        if(token){
+            //Pega todos os headers e adiciona o header Autorization
+            //Adiciona o token junto com o Bearer que é o tipo de autorização feita na requisição
+            httpClient.defaults.headers.common['Authorization'] = `Bearer ${token}`
+        }
     }
 
     //Metodos padroes
