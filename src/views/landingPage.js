@@ -18,7 +18,7 @@ class LandingPage extends React.Component{
 
                 <div className="offset-md-4 col-md-4">
                     <button onClick={this.goToHomePage} className="btn btn-success" style={{width: '100%'}}>
-                        <i className="pi pi-sign-in"></i>Acessar
+                        <i className="pi pi-sign-in">    </i>   Acessar
                     </button>
                 </div>
             </div>
