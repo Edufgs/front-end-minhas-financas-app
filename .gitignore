@@ -18,7 +18,10 @@
 .env.test.local
 .env.production.local
 .env
+<<<<<<< HEAD
 .env.production
+=======
+>>>>>>> e87b34004e80ef0dfb0f44b7fe23cb80e90715e7
 
 package-lock.json
 
