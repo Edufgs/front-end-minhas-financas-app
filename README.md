@@ -28,9 +28,9 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
 # Instalações: 
 <b>Node JS:</b> Baixe o Node JS no site oficial https://nodejs.org/en/download/ e instale.
 
-O <b>npm</b> é um gerenciador de pacotes do node js. Vem junto do node js quando instalado. Ele é usado para baixar as dependências do projeto.
+O <b>npm</b> é um gerenciador de pacotes do  Node JS. Vem junto do  Node JS quando instalado. Ele é usado para baixar as dependências do projeto.
 
-<b>yarn</b> é um gerenciador de pacotes do node js melhor que o npm tanto em performance quanto em recursos. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g yarn"
+<b>yarn</b> é um gerenciador de pacotes do  Node JS melhor que o npm tanto em performance quanto em recursos. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g yarn"
 
 <b>create react app:</b> usado para gerar as aplicações react. É preciso instalar pelo cmd depois de instalar o Node JS usando o comando "npm install -g create-react-app". Se aparecer o erro: "npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap." então execute "npm i tar" para atualizar.
 
