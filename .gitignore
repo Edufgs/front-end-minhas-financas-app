@@ -18,9 +18,33 @@
 .env.test.local
 .env.production.local
 .env
+.env.production
 
 package-lock.json
 
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+build/asset-manifest.json
+build/computador.png
+build/index.html
+build/robots.txt
+build/static/css/main.e60b7f36.css
+build/static/css/main.e60b7f36.css.map
+build/static/js/main.21e5db91.js
+build/static/js/main.21e5db91.js.LICENSE.txt
+build/static/js/main.21e5db91.js.map
+build/static/media/Inter-Bold.93c1301bd9f486c573b3.woff
+build/static/media/Inter-Bold.ec64ea577b0349e055ad.woff2
+build/static/media/Inter-Light.2d5198822ab091ce4305.woff2
+build/static/media/Inter-Light.994e34451cc19ede31d3.woff
+build/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2
+build/static/media/Inter-Medium.9053572c46aeb4b16caa.woff
+build/static/media/Inter-Regular.8c206db99195777c6769.woff
+build/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2
+build/static/media/Inter-SemiBold.b5f0f109bc88052d4000.woff2
+build/static/media/Inter-SemiBold.cca62d21c8c555c392e5.woff
+build/static/media/primeicons.7fc4d8e224d1ff1b9c62.eot
+build/static/media/primeicons.91bacab1f083f2795272.ttf
+build/static/media/primeicons.449aa8c65cdc5c2a8686.woff
+build/static/media/primeicons.c6e2053303524e39530c.svg
