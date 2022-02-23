@@ -21,6 +21,9 @@ Desenvolvimento front-end usando React de um site para registrar as finanças, o
 <b>PrimeReact:</b> Biblioteca com vários componentes react prontos e estilizados.
 <br>Site Oficial: https://www.primefaces.org/primereact/ 
 <br>Site de configuração: https://www.primefaces.org/primereact/setup/
+
+<b>jwt-decode:</b> Biblioteca de navegador que ajuda a decodificar o token JWTs codificado em Base64Url.
+<br>Site Oficial: https://github.com/auth0/jwt-decode
  
 # Editor de código-fonte:
 <b>Visual Studio Code:</b> O Visual Studio Code é um editor de código-fonte desenvolvido pela Microsoft para Windows, Linux e macOS. Ele inclui suporte para depuração, controle de versionamento Git incorporado, realce de sintaxe, complementação inteligente de código, snippets e refatoração de código.
@@ -42,9 +45,19 @@ O <b>npm</b> é um gerenciador de pacotes do  Node JS. Vem junto do  Node JS qua
 
 <b>PrimeReact:</b> No diretório do projeto dentro do cmd escreva o comando "yarn add primereact primeicons react-transition-group", assim é adicionado as dependências necessárias para o uso do primereact.
 
+<b>jwt-decode:</b> Para instalar é usado o comando "yarn add jwt-decode" no cmd no diretorio do projeto.
+
 # Criação do projeto:
 Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
 Depois de criado é só entrar na pasta e usar o comando "yarn start".
 
 Para abrir a aplicação é só executar no navegador:
 <br>Local: http://localhost:3000
+
+#Build projeto:
+Para construir a aplicação usa-se o comando "yarn build" e assim o app é disponibilizado na pasta "build".
+
+#Publicando aplicação na nuvem
+Foi utilizado o Heroku para publicação da aplicação onde ele é uma plataforma amplamente confiável como uma oferta de serviço que permite aos desenvolvedores realizar implantação, escalonamento e gerenciamento de aplicativos sem complicações. Esta plataforma oferece suporte para uma ampla gama de linguagens de programação, como Java, Ruby, PHP, Node.js, Python, Scala e Clojure. O Heroku executa aplicativos por meio de contêineres virtuais conhecidos como Dynos.
+
+Aplicação pronta está disponivel: https://minhasfinancas-edufgs-app.herokuapp.com/
