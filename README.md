@@ -39,9 +39,9 @@ O <b>npm</b> é um gerenciador de pacotes do  Node JS. Vem junto do  Node JS qua
 
 <b>Bootswatch:</b> Para instalar as dependências do bootswatch é só entrar no projeto pelo cmd e usar o comando "yarn add bootswatch"
 
-<b>Toastr:</b> Vá até o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar. Assim vai ser instalado automaticamente.
+<b>Toastr:</b> Vá até o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar.
 
-<b>react-currency-format:</b> Vá até o endereço do projeto a partir do console e digite "yarn add currency-formatter". Assim é instalado automaticamente.
+<b>react-currency-format:</b> Vá até o endereço do projeto a partir do console e digite "yarn add currency-formatter".
 
 <b>PrimeReact:</b> No diretório do projeto dentro do cmd escreva o comando "yarn add primereact primeicons react-transition-group", assim é adicionado as dependências necessárias para o uso do primereact.
 
