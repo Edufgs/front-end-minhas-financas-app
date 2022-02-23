@@ -1,5 +1,7 @@
 # minhas-financas-app
 Desenvolvimento front-end usando React de um site para registrar as finanças, onde o objetivo é aplicar o conhecimento do programador.
+
+Aplicação pronta está disponivel: https://minhasfinancas-edufgs-app.herokuapp.com/
  
 # Ferramentas usadas:
 <b>React:</b> é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais. É utilizado nos sites da Netflix, Imgur, Feedly, Airbnb, SeatGeek, HelloSign, Walmart e outros.
@@ -41,15 +43,15 @@ O <b>npm</b> é um gerenciador de pacotes do  Node JS. Vem junto do  Node JS qua
 
 <b>Toastr:</b> Vá até o endereço do projeto a partir do console e digite "yarn add toastr" para adicionar.
 
-<b>react-currency-format:</b> Vá até o endereço do projeto a partir do console e digite "yarn add currency-formatter".
+<b>react-currency-format:</b> No endereço do projeto a partir do console e digite "yarn add currency-formatter".
 
 <b>PrimeReact:</b> No diretório do projeto dentro do cmd escreva o comando "yarn add primereact primeicons react-transition-group", assim é adicionado as dependências necessárias para o uso do primereact.
 
-<b>jwt-decode:</b> Para instalar é usado o comando "yarn add jwt-decode" no cmd no diretorio do projeto.
+<b>jwt-decode:</b> Para instalar é usado o comando "yarn add jwt-decode" no cmd no diretório do projeto.
 
 # Criação do projeto:
-Para criar o projeto é só ir no diretorio pelo cmd e usar o comando "create-react-app nome_da_aplicação".
-Depois de criado é só entrar na pasta e usar o comando "yarn start".
+Para criar o projeto usa-se o comando "create-react-app nome_da_aplicação".
+Depois de criado é utilizado o comando "yarn start" para iniciar a aplicação.
 
 Para abrir a aplicação é só executar no navegador:
 <br>Local: http://localhost:3000
