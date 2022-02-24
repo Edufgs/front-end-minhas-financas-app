@@ -1,6 +1,8 @@
 # minhas-financas-app
 Desenvolvimento front-end usando React de um site para registrar as finanças, onde o objetivo é aplicar o conhecimento do programador.
 
+Codigo back-end disponivel em: https://github.com/Edufgs/Back-End-minhas-financas-app
+
 Aplicação pronta está disponivel: https://minhasfinancas-edufgs-app.herokuapp.com/
  
 # Ferramentas usadas:
