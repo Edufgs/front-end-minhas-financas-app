@@ -61,7 +61,7 @@ Para abrir a aplicação é só executar no navegador:
 # Build projeto:
 Para construir a aplicação usa-se o comando "yarn build" e assim o app é disponibilizado na pasta "build".
 
-#Publicando aplicação na nuvem:
+# Publicando aplicação na nuvem:
 Foi utilizado o Heroku para publicação da aplicação onde ele é uma plataforma amplamente confiável como uma oferta de serviço que permite aos desenvolvedores realizar implantação, escalonamento e gerenciamento de aplicativos sem complicações. Esta plataforma oferece suporte para uma ampla gama de linguagens de programação, como Java, Ruby, PHP, Node.js, Python, Scala e Clojure. O Heroku executa aplicativos por meio de contêineres virtuais conhecidos como Dynos.
 
 Aplicação pronta está disponivel: https://minhasfinancas-edufgs-app.herokuapp.com/
