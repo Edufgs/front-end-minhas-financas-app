@@ -4,7 +4,13 @@ Desenvolvimento front-end usando React de uma aplicação WEB para registrar as 
 Codigo back-end disponivel em: https://github.com/Edufgs/Back-End-minhas-financas-app
 
 Aplicação pronta está disponivel: https://minhasfinancas-edufgs-app.herokuapp.com/
- 
+
+# Imagens
+
+![Entrada](https://user-images.githubusercontent.com/44234388/160481865-fe200d1a-0e2b-4775-b7fe-65b3ec3616cb.png)
+![Home](https://user-images.githubusercontent.com/44234388/160481904-eaf39cb3-a7cb-4c22-8a65-c786226a50a3.png)
+![Login](https://user-images.githubusercontent.com/44234388/160481918-9085362c-f5b6-4c0e-ae1d-5b614420c36b.png)
+
 # Ferramentas usadas:
 <b>React:</b> é uma biblioteca JavaScript de código aberto com foco em criar interfaces de usuário em páginas web. É mantido pelo Facebook, Instagram, outras empresas e uma comunidade de desenvolvedores individuais. É utilizado nos sites da Netflix, Imgur, Feedly, Airbnb, SeatGeek, HelloSign, Walmart e outros.
 
